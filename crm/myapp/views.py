@@ -5,6 +5,6 @@ def hello_world(request):
     return HttpResponse("Hello World!")
 
 def index(request):
-    return HttpResponse("<p><h1>Hello</h1>this is simple index</p>")
-
+    context={'name':'moein sarvi','age':36,'title':'developer'}
+    return render(request,'myapp/index.html',context)
 
